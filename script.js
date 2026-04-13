@@ -28,12 +28,19 @@ function setupCopy() {
     el.addEventListener("click", async () => {
         const text = el.textContent;
 
-        if (!text) return;
+        if (!text || text === "Paina nappia") return;
 
         try {
             await navigator.clipboard.writeText(text);
+
+            el.classList.add("copied");
+
+            setTimeout(() => {
+                el.classList.remove("copied");
+            }, 900);
+
         } catch (err) {
-            console.error("Copy failed:", err);
+            console.error(err);
         }
     });
 }
