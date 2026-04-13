@@ -1,0 +1,42 @@
+{
+  "alkuosat": [
+    "Ala","Ylä","Iso","Pikku","Keski","Vähä","Suur",
+
+    "Kivi","Kallio","Mäki","Harju","Kangas","Salo","Korpi","Lehto",
+    "Rinne","Notko","Rotko","Kumpu","Niemi","Ranta","Selkä","Luoto",
+
+    "Joki","Puro","Koski","Lampi","Järvi","Suo","Luhta","Neva","Räme",
+
+    "Koivu","Mänty","Kuusi","Haapa","Pihlaja","Leppä","Kataja","Tammi",
+
+    "Kala","Hauki","Ahven","Siika","Lohi",
+
+    "Susi","Karhu","Hirvi","Kettu","Ilves",
+
+    "Pelto","Niitty","Aho","Keto",
+
+    "Vanha","Uusi","Autio","Pyhä","Kylmä",
+
+    "Musta","Valkea","Puna","Vihreä","Sininen",
+
+    "Tuuli","Myrsky","Sade","Sumu","Halla",
+
+    "Pohja","Etelä","Itä","Länsi",
+
+    "Malma","Suven","Kalma","Valkea","Syrjä","Pirun","Pohjan"
+  ],
+
+  "loppuosat": [
+    "mäki","salo","vuo","aho","kolo","koto","aro","keto","kannas","kärki",
+    "vuori","vaara","mantu","huippu","maa","saari","lehto","korpi","niitty",
+    "luhta","onkalo","selkä","kangas","harju","rinne","ranta","puro","joki",
+    "lampi","järvi","suo","luoto","kari","kallio","kumpu","tasanko","notko",
+    "rotko","nummi","kajo"
+  ],
+
+  "monikot": [
+    "mannut","niityt","vuoret","huiput","maat","saaret","kankaat","harjut",
+    "rinteet","rannat","purot","joet","lammet","järvet","suot","luodot",
+    "karit","kalliot","kummut","tasangot","notkot","rotkot","nummet"
+  ]
+}
