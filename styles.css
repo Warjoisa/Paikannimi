@@ -1,13 +1,16 @@
-html, body {
+body {
     margin: 0;
     font-family: "JetBrains Mono", monospace;
     background-color: #111;
     color: #abcade;
-    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
 }
 
 .container {
-    min-height: 100dvh;
+    flex: 1; /* tärkein rivi */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,11 +18,9 @@ html, body {
 }
 
 .site-footer {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
     text-align: center;
     font-size: 12px;
+    padding: 10px 0;
 }
 
 h1 {
