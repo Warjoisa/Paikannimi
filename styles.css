@@ -1,63 +1,82 @@
-body {
-    margin: 0;
-    font-family: "JetBrains Mono", monospace;
-    background-color: #111;
-    color: #abcade;
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-    align-items: center;
-    overflow: hidden;
-}
-
-.container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    padding: 0 16px;
-}
-
-.site-footer {
-    text-align: center;
-    font-size: 12px;
-    padding: 6px 0;
-}
-
-h1 {
-    margin-bottom: 30px;
-    font-size: clamp(20px, 7vw, 32px);
-    text-align: center;
-}
-/* Mul o nälkä atm */
-button {
-    font-family: "JetBrains Mono", monospace;
-    padding: 14px 24px;
-    font-size: 18px;
-    cursor: pointer;
-    background: none;
-    color: #abcade;
-    border: 1px solid #abcade;
-    border-radius: 9px;
-}
-
-button:hover {
-    transform: translateY(-1px);
-    background-color: #151515;
-}
-
-button:active {
-    transform: translateY(0);
-}
-
-#tulos {
-    margin-top: 20px;
-    font-size: clamp(16px, 6vw, 24px);
-    text-align: center;
-    overflow-wrap: anywhere;
-    line-height: 1.4;
-    cursor: pointer;
-}
+    body {
+        margin: 0;
+        font-family: "JetBrains Mono", monospace;
+        background-color: #111;
+        color: #abcade;
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px;
+        padding: 0 16px;
+    }
+    
+    .site-footer {
+        text-align: center;
+        font-size: 12px;
+        padding: 6px 0;
+    }
+    
+    h1 {
+        margin-bottom: 30px;
+        font-size: clamp(20px, 7vw, 32px);
+        text-align: center;
+    }
+    /* Mul o nälkä atm */
+    button {
+        font-family: "JetBrains Mono", monospace;
+        padding: 14px 24px;
+        font-size: 18px;
+        cursor: pointer;
+        background: none;
+        color: #abcade;
+        border: 1px solid #abcade;
+        border-radius: 9px;
+    }
+    
+    button:hover {
+        transform: translateY(-1px);
+        background-color: #151515;
+    }
+    
+    button:active {
+        transform: translateY(0);
+    }
+    
+    #tulos {
+        margin-top: 20px;
+        font-size: clamp(16px, 6vw, 24px);
+        cursor: pointer;
+        position: relative;
+    }
+    
+    #tulos::before {
+        content: "Kopioi";
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.15s ease;
+    }
+    
+    #tulos:hover::before {
+        opacity: 0.6;
+    }
+    
+    #tulos.copied::before {
+        content: "Kopioitu";
+        opacity: 1;
+        color: green;
+    }
