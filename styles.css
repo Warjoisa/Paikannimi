@@ -59,4 +59,5 @@ button:active {
     text-align: center;
     overflow-wrap: anywhere;
     line-height: 1.4;
+    cursor: pointer;
 }
