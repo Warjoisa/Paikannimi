@@ -1,7 +1,7 @@
 let data = null;
 
 async function lataaData() {
-  const res = await fetch("./data.json");
+  const res = await fetch("data.json");
   data = await res.json();
 }
 
