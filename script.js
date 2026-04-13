@@ -1,8 +1,20 @@
 let data = null;
+let valmis = false;
 
 async function lataaData() {
-  const res = await fetch("data.json");
-  data = await res.json();
+  try {
+    const res = await fetch("data.json", { cache: "no-store" });
+
+    if (!res.ok) {
+      throw new Error("Dataa ei voitu ladata");
+    }
+
+    data = await res.json();
+    valmis = true;
+  } catch (err) {
+    console.error(err);
+    document.getElementById("tulos").textContent = "Latausvirhe";
+  }
 }
 
 function random(lista) {
@@ -10,7 +22,12 @@ function random(lista) {
 }
 
 function generoi() {
-  if (!data) return;
+  const el = document.getElementById("tulos");
+
+  if (!valmis || !data) {
+    el.textContent = "Ladataan...";
+    return;
+  }
 
   const käytäMonikkoa = Math.random() < 0.3;
 
@@ -19,20 +36,49 @@ function generoi() {
     ? random(data.monikot)
     : random(data.loppuosat);
 
-  const nimi = alku + loppu;
-
-  document.getElementById("tulos").textContent = nimi;
+  el.textContent = alku + loppu;
 }
 
-document.getElementById("tulos").addEventListener("click", () => {
-    const teksti = document.getElementById("tulos").innerText;
-    navigator.clipboard.writeText(teksti);
-});
+async function kopioi() {
+  const el = document.getElementById("tulos");
+  const teksti = el.innerText;
 
-// init
-window.onload = async () => {
+  if (!teksti || teksti === "Ladataan..." || teksti === "Latausvirhe") {
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(teksti);
+
+    const alkuperainen = el.textContent;
+    el.textContent = "Kopioitu!";
+
+    setTimeout(() => {
+      el.textContent = alkuperainen;
+    }, 700);
+  } catch {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const tulos = document.getElementById("tulos");
+  const nappi = document.querySelector("button");
+
+  tulos.addEventListener("click", kopioi);
+
+  if (nappi) {
+    nappi.addEventListener("click", generoi);
+  }
+
   await lataaData();
+
   generoi();
-};
+});
 
 window.generoi = generoi;
