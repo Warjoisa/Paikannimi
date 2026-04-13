@@ -24,6 +24,11 @@ function generoi() {
   document.getElementById("tulos").textContent = nimi;
 }
 
+document.getElementById("tulos").addEventListener("click", () => {
+    const teksti = document.getElementById("tulos").innerText;
+    navigator.clipboard.writeText(teksti);
+});
+
 // init
 window.onload = async () => {
   await lataaData();
