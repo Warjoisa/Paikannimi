@@ -1,3 +1,8 @@
-Iha vitu hullu Paikannimigeneraattori.
+# Paikannimigeneraattori
 
-https://warjoisa.github.io/Paikannimi/
+Paikannimigeneraattori on tsydeemi joka keksii sinun puolestasi aivan paikannimen.
+
+
+## Käyttö
+
+[Tämä on linkki Paikannimigeneraattoriin](https://warjoisa.github.io/Paikannimi/)
