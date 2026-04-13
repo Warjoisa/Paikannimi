@@ -7,7 +7,7 @@
 
     "Joki","Puro","Koski","Lampi","Järvi","Suo","Luhta","Neva","Räme",
 
-    "Koivu","Mänty","Kuusi","Haapa","Pihlaja","Leppä","Kataja","Tammi",
+    "Koivu","Mänty","Kuusi","Haapa","Pihlaja","Leppä","Kataja","Tammi","Kielo",
 
     "Kala","Hauki","Ahven","Siika","Lohi",
 
@@ -17,13 +17,13 @@
 
     "Vanha","Uusi","Autio","Pyhä","Kylmä",
 
-    "Musta","Valkea","Puna","Vihreä","Sininen",
+    "Musta","Valkea","Puna","Vihreä","Sini",
 
     "Tuuli","Myrsky","Sade","Sumu","Halla",
 
     "Pohja","Etelä","Itä","Länsi",
 
-    "Malma","Suven","Kalma","Valkea","Syrjä","Pirun","Pohjan"
+    "Malma","Suven","Kalma","Valkea","Syrjä","Pirun","Pohjan","Valon","Tuhka"
   ],
 
   "loppuosat": [
@@ -31,7 +31,7 @@
     "vuori","vaara","mantu","huippu","maa","saari","lehto","korpi","niitty",
     "luhta","onkalo","selkä","kangas","harju","rinne","ranta","puro","joki",
     "lampi","järvi","suo","luoto","kari","kallio","kumpu","tasanko","notko",
-    "rotko","nummi","kajo"
+    "rotko","nummi","kajo","kaiku"
   ],
 
   "monikot": [
